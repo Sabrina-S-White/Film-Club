@@ -72,7 +72,7 @@ button {
 }
 
 .head {
-    height: 300px;
+    height: 350px;
     width: 100%;
     background: linear-gradient(rgb(var(--purple1)), rgb(var(--purple2)));
     display: flex;
@@ -106,7 +106,7 @@ button {
     width: 90%; 
     font-weight: 500;
     font-size: max(auto 18px);
-    margin-top: 20px;
+    margin: 10px 0 15px 0;
 }
 
 .tileDiv {
