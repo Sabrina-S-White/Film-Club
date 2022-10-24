@@ -1,301 +1,333 @@
 :root {
-    --pink1: 224, 177, 203;
-    --pink2: 190, 149, 196;
-    --purple1: 159, 134, 192;
-    --purple2: 94, 84, 142;
-    --purple3: 35, 25, 66;
-    --blue1: 116, 140, 171;
-    --blue2: 62, 92, 118;
-    --blue3: 29, 45, 68;
-    --cream: 240, 235, 216;
-    --black: 13, 19, 33;
-    color: rgb(var(--black));
+  --pink1: 224, 177, 203;
+  --pink2: 190, 149, 196;
+  --purple1: 159, 134, 192;
+  --purple2: 94, 84, 142;
+  --purple3: 35, 25, 66;
+  --blue1: 116, 140, 171;
+  --blue2: 62, 92, 118;
+  --blue3: 29, 45, 68;
+  --cream: 240, 235, 216;
+  --black: 13, 19, 33;
+  color: rgb(var(--black));
+}
+
+@font-face {
+  font-family: lobster;
+  src: url(./fonts/Lobster-Regular.ttf);
+}
+
+@font-face {
+  font-family: regular;
+  src: url(./fonts/Righteous-Regular.ttf);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
 }
 
+
 body {
-    min-height: 100vh;
-    width: 100%;
-    background-color: rgb(var(--purple3));
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgb(var(--blue2));
 }
 
 button {
-    background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 .page {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
 }
 
 .menu {
-    height: 50px;
-    width: 100%;
-    background: linear-gradient(rgb(var(--pink1)), rgb(var(--purple1)));
-    display: flex;
-    justify-content: space-between;
+  height: 100px;
+  width: 100%;
+  background: rgb(var(--blue2));
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding-left: 20px;
 }
 
 .menuL {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 20%;
 }
 
 .menuR {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 20%;
+  display: flex;
+  height: 100%;
+  width: 20%;
 }
 
 #logo {
-    height: 40px;
-    width: 40px;
+  height: 100px;
+  width: 100px;
 }
 
 .head {
-    height: 350px;
-    width: 100%;
-    background: linear-gradient(rgb(var(--purple1)), rgb(var(--purple2)));
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 350px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(var(--blue2));
+  box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+  z-index: 1;
 }
 
 .masc {
-    width: 100%;
-    height: 90%;
-    background-color: rgba(Var(--black), 0.4);
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  height: 90%;
+  background-color: rgba(Var(--black), 0.4);
+  display: flex;
+  justify-content: center;
 }
 
 .headDiv {
-    width: 90%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    color: rgb(Var(--cream))
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgb(Var(--cream));
 }
 
 .headText h1 {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .welcomeText {
-    width: 90%; 
-    font-weight: 500;
-    font-size: max(auto 18px);
-    margin: 10px 0 15px 0;
+  width: 90%;
+  font-weight: 100;
+  font-size: max(auto 18px);
+  margin: 10px 0 15px 0;
 }
 
 .tileDiv {
-    height: auto;
-    width: 100%;
-    background: linear-gradient(rgb(var(--purple2)), rgb(var(--purple3)));
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 0px;
-    flex: 1;
+  height: auto;
+  width: 100%;
+  background: #8e9aaf;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0px;
+  flex: 1;
 }
 
 .tile {
-    height: 600px;
-    width: 90%;
-    background-color: rgb(var(--blue3));
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 600px;
+  width: 90%;
+  background-color: rgb(var(--blue3));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .tileText {
-    width: 90%;
-    height: 250px;
-    padding-bottom: 20px;
-    color: rgb(Var(--cream));
-    font-size: 15px;
-}
-
-.tileText h2 {
-    text-decoration: underline;
+  width: 90%;
+  height: 250px;
+  padding-bottom: 20px;
+  color: rgb(Var(--cream));
+  font-size: 15px;
 }
 
 .date {
-    text-align: end;
+  text-align: end;
 }
 
 .movie {
-    height: 300px;
-    width: 100%;
-    background-color: rgb(var(--blue3));
-    margin: 0 15px 15px 15px;
+  height: 300px;
+  width: 100%;
+  background-color: rgb(var(--blue3));
+  margin: 0 15px 15px 15px;
 }
 
 .movie img {
-    object-fit:scale-down;
-    height: 100%;
-    width: 100%;
+  object-fit: scale-down;
+  height: 100%;
+  width: 100%;
 }
 
 .footer {
-    height: 50px;
-    width: 100%;
-    background: linear-gradient(rgb(var(--purple3)), rgb(var(--purple3)));
-    text-align: center;
-    display: flex;
-    justify-content: center;
+  height: 50px;
+  width: 100%;
+  background: #8e9aaf;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .contactList {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    gap: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 25px;
 }
 
 .contactList li a img {
-    display: flex; 
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #btn {
-    position: static;
-
+  position: static;
 }
 
 .testDiv {
-    width: 100%;
-    background-color: rgb(var(--purple2));
-    position: absolute; 
-    overflow: hidden; 
-    top: 50px;
-    left: 0px;
-    transition: 0.5s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} 
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 147px;
+  left: 0px;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(var(--blue2));
+  z-index: 2;
+}
 
 .testDiv ul li,
 .testDiv ul li a {
-    list-style: none;
-    text-decoration: none;
-    color: rgb(Var(--cream));
-    margin: 20px 0;
+  list-style: none;
+  text-decoration: none;
+  color: rgb(Var(--cream));
+  margin: 20px 0;
 }
 
 .testDiv ul li a:hover {
-    color:rgb(var(--pink1));
+  color:rgb(var(--pink1));
 }
 
+h1 {
+  font-family: lobster;
+  font-size: 3rem;
+}
+
+.tileTitle {
+  font-family: lobster;
+}
+
+.heroSub {
+  font-family: regular;
+  font-size: 1.2rem;
+}
+
+.tileDescription {
+  font-family: regular;
+}
+
+#burger {
+  position: absolute;
+  right: 25px;
+  top: 30px;
+}
+
+/* MEDIA QUERY HERE */
+
 @media only screen and (min-width: 700px) {
-    #btn {
-        display: none;
-    }
+  #btn {
+    display: none;
+  }
 
-    
-    .menu .menuR {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .menu .menuR {
+    display: flex;
+    justify-content: center;
+  }
 
-    .menuR .testDiv {
-        position: static;
-        overflow: inherit;
-    }
+  .menuR .testDiv {
+    position: static;
+    overflow: inherit;
+  }
 
-    .menuR .testDiv ul{
-        display: flex;
-        list-style: none;
-        gap: 30px;
-    }
+  .menuR .testDiv ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
 
-    .menuR .testDiv ul li a {
-        text-decoration: none;
-        color: rgb(Var(--black));
-        font-weight: 600;
-    }   
+  .menuR .testDiv ul li a {
+    text-decoration: none;
+    color: rgb(Var(--cream));
+    font-weight: 600;
+    font-size: large;
+  }
 
-    .hover {
-        border:none;
-        font-size: inherit;
-        font-family: inherit;
-        color: rgb(Var(--black));
-        position: relative;
-        font-weight: bolder;
-        position: relative;
-    }
-    
-    .hover::after {
-        content: '';
-        height: 2px;
-        width: 0;
-        background: rgb(Var(--black));
-        position: absolute;
-        left: 0;
-        bottom: -4px;
-        transition: 0.5s;
-    }
-    
-    .hover:hover::after {
-        width: 100%;
-    }
+  .hover {
+    border: none;
+    font-size: inherit;
+    font-family: regular;
+    color: rgb(Var(--cream));
+    position: relative;
+    font-weight: bolder;
+    position: relative;
+  }
 
-    .page .head {
-        height: 200px;
-        width: 100%;
-        padding-top: 40px;
-        background: linear-gradient(rgb(var(--purple1)), rgb(var(--purple2)));
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .hover::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background: rgb(Var(--cream));
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.5s;
+  }
 
-    .page .head .headDiv {
-        display: flex;
-        flex-direction: row;
-        gap: 40px;
-        align-items: center;
-    }
+  .hover:hover::after {
+    width: 100%;
+  }
 
-    .headDiv .welcomeText {
-        width: 40%;
-        margin-top: 0;
-    }
+  .page .head {
+    height: 200px;
+    width: 100%;
+    background: rgb(var(--blue2));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .tileDiv {
-        flex-direction: row;
-    }
+  .page .head .headDiv {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+  }
 
-    .tile {
-        width: 30%;
-    }
+  .headDiv .welcomeText {
+    width: 40%;
+    margin-top: 0;
+  }
+
+  .tileDiv {
+    flex-direction: row;
+  }
+
+  .tile {
+    width: 30%;
+  }
 }

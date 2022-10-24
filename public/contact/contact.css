@@ -20,10 +20,21 @@
     list-style: none;
 }
 
+@font-face {
+  font-family: lobster;
+  src: url(../fonts/Lobster-Regular.ttf);
+}
+
+@font-face {
+  font-family: regular;
+  src: url(../fonts/Righteous-Regular.ttf);
+}
+
+
 body {
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(rgb(var(--purple1)), rgb(var(--purple3)));
+    background: #8e9aaf;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,11 +51,12 @@ button {
 }
 
 .menu {
-    height: 50px;
+    height: 100px;
     width: 100%;
     position: relative;
     display: flex;
     justify-content: space-between;
+    padding: 20px 0 0 40px;
 }
 
 .menuL {
@@ -64,8 +76,8 @@ button {
 }
 
 #logo {
-    height: 40px;
-    width: 40px;
+    height: 100px;
+    width: 100px;
 }
 
 #btn {
@@ -74,16 +86,18 @@ button {
 }
 
 .testDiv {
-    width: 100%;
-    position: absolute; 
-    overflow: hidden; 
-    top: 50px;
-    transition: 0.5s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(var(--blue1));
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 120px;
+  left: 0px;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(var(--blue2));
+  z-index: 2;
 } 
 
 .testDiv ul li,
@@ -133,7 +147,31 @@ button {
 }
 
 .contactContainer ul li a:hover {
-    color:rgb(var(--pink1));
+    color:rgb(var(--cream));
+}
+
+h1 {
+  font-family: lobster;
+  font-size: 3rem;
+}
+
+.content {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactContainer p,
+.contactContainer ul li a {
+  font-family: regular;
+  font-size: 1.5rem;
+}
+
+#burger {
+  position: absolute;
+  right: 25px;
+  top: 30px;
 }
 
 @media only screen and (min-width: 700px) {
@@ -144,7 +182,7 @@ button {
     .border .menu {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+     
     }
 
     .menuL {
@@ -159,7 +197,8 @@ button {
 
     .menu .testDiv ul li,
     .menu .testDiv ul li a {
-        color: rgb(var(--black))
+        color: rgb(var(--cream));
+        font-family: regular;
     }
 
     .menu .testDiv ul{
@@ -170,7 +209,7 @@ button {
 
     .menuR .testDiv ul li a {
         text-decoration: none;
-        color: rgb(Var(--black));
+        color: rgb(Var(--cream));
         font-weight: 600;
     }   
 
@@ -205,7 +244,7 @@ button {
         content: '';
         height: 2px;
         width: 0;
-        background: rgb(Var(--black));
+        background: rgb(Var(--cream));
         position: absolute;
         left: 0;
         bottom: -4px;

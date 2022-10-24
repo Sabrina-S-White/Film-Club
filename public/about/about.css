@@ -1,269 +1,300 @@
 :root {
-    --pink1: 224, 177, 203;
-    --pink2: 190, 149, 196;
-    --purple1: 159, 134, 192;
-    --purple2: 94, 84, 142;
-    --purple3: 35, 25, 66;
-    --blue1: 116, 140, 171;
-    --blue2: 62, 92, 118;
-    --blue3: 29, 45, 68;
-    --cream: 240, 235, 216;
-    --black: 13, 19, 33;
-    color: rgb(var(--black));
+  --pink1: 224, 177, 203;
+  --pink2: 190, 149, 196;
+  --purple1: 159, 134, 192;
+  --purple2: 94, 84, 142;
+  --purple3: 35, 25, 66;
+  --blue1: 116, 140, 171;
+  --blue2: 62, 92, 118;
+  --blue3: 29, 45, 68;
+  --cream: 240, 235, 216;
+  --black: 13, 19, 33;
+  color: rgb(var(--black));
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: none;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  list-style: none;
 }
 
+@font-face {
+  font-family: lobster;
+  src: url(../fonts/Lobster-Regular.ttf);
+}
+
+@font-face {
+  font-family: regular;
+  src: url(../fonts/Righteous-Regular.ttf);
+}
+
+
 body {
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient(rgb(var(--purple1)), rgb(var(--purple3)));
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #8e9aaf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
-    background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 .menu {
-    height: 50px;
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
+  height: 100px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+    padding: 20px 0 0 40px;
 }
 
 .menuL {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 20%;
 }
 
 .menuR {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 20%;
+  display: flex;
+  justify-content: center;
+
+  height: 100%;
+  width: 20%;
 }
 
 #logo {
-    height: 40px;
-    width: 40px;
+  height: 100px;
+  width: 100px;
 }
 
 #btn {
-    position: static;
-
+  position: static;
 }
 
 .testDiv {
-    width: 100%;
-    position: absolute; 
-    overflow: hidden; 
-    top: 50px;
-    transition: 0.5s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(var(--blue1));
-} 
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 120px;
+  left: 0px;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(var(--blue2));
+  z-index: 2;
+}
 
 .testDiv ul li,
 .testDiv ul li a {
-    list-style: none;
-    text-decoration: none;
-    color: rgb(Var(--cream));
-    margin: 20px 0;
+  list-style: none;
+  text-decoration: none;
+  color: rgb(Var(--cream));
+  margin: 20px 0;
 }
 
 .container {
-    width: 90%;
-    height: 90%;
-    background-color: rgb(var(--blue2));
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 90%;
+  height: 90%;
+  background-color: rgb(var(--blue2));
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .border {
-    height: 95%;
-    width: 95%;
-    border: 1px solid rgb(var(--cream))
+  height: 95%;
+  width: 95%;
+  border: 1px solid rgb(var(--cream));
 }
 
 .border h1 {
-    text-align: center;
-    color: rgb(Var(--cream));
-}
-
-.spacer {
-    height: 5%;
-    width: 100%;
+  text-align: center;
+  color: rgb(Var(--cream));
 }
 
 .aboutContainer {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    color: rgb(var(--cream))
+  padding: 30px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: rgb(var(--cream));
+}
+
+.content {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: lobster;
+  font-size: 3rem;
+}
+
+.text {
+  font-family: regular;
+}
+
+#burger {
+  position: absolute;
+  right: 25px;
+  top: 30px;
 }
 
 @media only screen and (min-width: 700px) {
-    #btn {
-        display: none;
-    }
+  #btn {
+    display: none;
+  }
 
-    .border .menu {
+  .border .menu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menuL {
+    width: 10%;
+  }
+
+  .menu .testDiv ul li,
+  .menu .testDiv ul li a {
+    color: rgb(var(--cream));
+    font-family: regular;
+  }
+
+  .menu .testDiv {
+    position: static;
+    overflow: inherit;
+    width: 30%;
+  }
+
+  .menu .testDiv ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+
+  .menuR .testDiv ul li a {
+    text-decoration: none;
+    color: rgb(Var(--cream));
+    font-weight: 600;
+  }
+
+  .hover {
+    border: none;
+    font-size: inherit;
+    font-family: regular;
+    color: rgb(Var(--cream));
+    position: relative;
+    font-weight: bolder;
+    position: relative;
+  }
+
+  .hover::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background: rgb(Var(--black));
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.5s;
+  }
+
+  .hover:hover::after {
+    width: 100%;
+  }
+
+    @media only screen and (min-width: 700px) {
+      #btn {
+        display: none;
+      }
+
+      .border .menu {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-    }
+      }
 
-    .menuL {
+      .menuL {
         width: 10%;
-    }
+      }
 
-    .menu .testDiv ul li,
-    .menu .testDiv ul li a {
-        color: rgb(var(--black))
-    }
-
-    .menu .testDiv {
+      .menu .testDiv {
         position: static;
         overflow: inherit;
         width: 30%;
-    }
+      }
 
-    .menu .testDiv ul{
+      .menu .testDiv ul {
         display: flex;
         list-style: none;
         gap: 30px;
-    }
+      }
 
-    .menuR .testDiv ul li a {
+      .menuR .testDiv ul li a {
         text-decoration: none;
         color: rgb(Var(--black));
         font-weight: 600;
-    }    
+      }
 
-    .hover {
-        border:none;
+      .contactContainer {
+        position: static;
+        overflow: inherit;
+      }
+
+      .contactContainer ul {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+      }
+
+      .contactContainer ul li a {
+        text-decoration: none;
+        color: rgb(Var(--cream));
+        font-weight: 600;
+      }
+
+      .hover {
+        border: none;
         font-size: inherit;
         font-family: inherit;
-        color: rgb(Var(--black));
+        color: rgb(Var(--cream));
         position: relative;
         font-weight: bolder;
         position: relative;
-    }
-    
-    .hover::after {
+      }
+
+      .hover::after {
         content: '';
         height: 2px;
         width: 0;
-        background: rgb(Var(--black));
+        background: rgb(Var(--cream));
         position: absolute;
         left: 0;
         bottom: -4px;
         transition: 0.5s;
-    }
-    
-    .hover:hover::after {
-        width: 100%;@media only screen and (min-width: 700px) {
-            #btn {
-                display: none;
-            }
-        
-            .border .menu {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-        
-            .menuL {
-                width: 10%;
-            }
-        
-            .menu .testDiv {
-                position: static;
-                overflow: inherit;
-                width: 30%;
-            }
-        
-            .menu .testDiv ul{
-                display: flex;
-                list-style: none;
-                gap: 30px;
-            }
-        
-            .menuR .testDiv ul li a {
-                text-decoration: none;
-                color: rgb(Var(--black));
-                font-weight: 600;
-            }   
-        
-            .contactContainer {
-                position:static;
-                overflow: inherit;
-            }
-        
-            .contactContainer ul{
-                display: flex;
-                list-style: none;
-                gap: 30px;
-            }
-        
-            .contactContainer ul li a {
-                text-decoration: none;
-                color: rgb(Var(--cream));
-                font-weight: 600;
-            }   
-        
-            .hover {
-                border:none;
-                font-size: inherit;
-                font-family: inherit;
-                color: rgb(Var(--cream));
-                position: relative;
-                font-weight: bolder;
-                position: relative;
-            }
-            
-            .hover::after {
-                content: '';
-                height: 2px;
-                width: 0;
-                background: rgb(Var(--black));
-                position: absolute;
-                left: 0;
-                bottom: -4px;
-                transition: 0.5s;
-            }
-            
-            .hover:hover::after {
-                width: 100%;
-            }
-        
-        }
-    }
+      }
 
+      .hover:hover::after {
+        width: 100%;
+      }
+    }
+  }
 }
